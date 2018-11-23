@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>黑龙江悦达管道工程建筑有限公司</title>
+    <meta name="keywords" content="{$info4.keywords}">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/animate.css">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/swiper.min.css">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/style.css">
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+        function hideURLbar() { window.scrollTo(0, 1); }
+    </script>
+</head>
+
+<body>
+<header>
+    <div class="fixed-header">
+        <div class="navbar-wrapper">
+            <div class="container-fluid">
+                <nav class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a class="navbar-brand" href="#">
+                                <img src="/public/__STATIC__/index/static/images/logo.jpg" alt="">
+                                黑龙江悦达管道工程建筑有限公司</a>
+                        </div>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <nav  @click="closeNav">
+                            <ul class="nav navbar-nav">
+                                <li><a href="{:url('Index/index')}"  class="active">首页</a></li>
+                                <li><a href="{:url('Index/about')}">公司简介</a></li>
+                                <li><a href="{:url('Index/cases')}">工程案例</a></li>
+                                <li><a href="{:url('Index/product')}">产品展示</a></li>
+                                <li><a href="{:url('Index/news')}">新闻中心</a></li>
+                                <li><a href="{:url('Index/contact')}">联系我们</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="swiper-container" id="swiper1">
+    <div class="swiper-wrapper">
+        {volist name="info" id="vo"}
+        <div class="swiper-slide"><img src="{$vo.banner}" alt=""></div>
+        {/volist}
+
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+<div class="wordart wow zoomIn">
+    <img src="/public/__STATIC__/index/static/images/wordartC.png">
+</div>
+<ul class="abstract wrapper wow fadeInUp">
+    {volist name="info1" id="vo"}
+    <li class="col-md-4 col-xs-12 ">
+        <a href="{:url($vo.url)}">
+            <img src="/public/__STATIC__/index/static/images/shuqian.png">
+            <h4>{$vo.name}</h4>
+            <p><span>{$vo.neirong}</span></p>
+        </a>
+    </li>
+    {/volist}
+
+</ul>
+<seciton class="index-about">
+    <div class="index-about-title">
+        <h2 class="wow slideInLeft">关于我们</h2>
+        <p class="wow slideInRight">客观创新授权制造产品，而平行平台。综合掌握可靠的供应链扩展的测试程序。戏剧性地搞顶线的Web服务与前沿成果。</p>
+        <p  class="wow slideInRight">前瞻性地设想基于多媒体的专业知识和跨媒体增长战略。无需高级协作就能无缝地可视化优质智力资本</p>
+    </div>
+    <div class="swiper-container" id="swiper2">
+        <div class="swiper-wrapper ">
+            {volist name="info3" id="vo"}
+            <div class="swiper-slide wow fadeInUp">
+                <a href="{:url('Index/casedetail',array('id'=>$vo.id))}">
+                    <img src="{$vo.img}">
+                </a>
+            </div>
+            {/volist}
+        </div>
+    </div>
+    <div class="readmore">
+        <span>你真的确信吗？那就联系我们吧！</span>
+        <a href="contact.html">了解更多</a>
+    </div>
+</seciton>
+<div class="bg-img clearfix">
+    <div class="bg-content wrapper">
+        <div class="bg-font">
+            <p><span>从1987建立公司以来建筑专家。</span></p>
+            <p><span>今天得到一个报价！</span></p>
+        </div>
+        <div class="bg-btn">
+            <a href="contact.html">联系我们</a>
+        </div>
+    </div>
+</div>
+<section class="lastest-news">
+    <div class="wrapper">
+        <h2 class="wow fadeInUp"><strong><span>最新消息</span></strong></h2>
+        <ul class="news-list wow fadeInLeft">
+            {volist name="info5" id="vo"}
+            <li>
+                <a href="{:url('Index/newsdetail',array('id'=>$vo.id))}">
+                    <img src="{$vo.img}" alt="">
+                    <div class="news-content">
+                        <p><strong>{$vo.biaoti}</strong></p>
+                        <p><span>{$vo.shijian}</span></p>
+                        <p>{$vo.jianjie}</p>
+                    </div>
+                </a>
+            </li>
+            {/volist}
+        </ul>
+        <div class="learnmore wow fadeInLeft">
+            <a href="news.html">了解更多</a>
+        </div>
+    </div>
+</section>
+<section class="partner wrapper">
+    <div class="partner-title">
+        <strong><span>我们的伙伴</span></strong>
+    </div>
+    <ul class="partner-content wow fadeInUp" data-wow-delay=".5s">
+        {volist name="info2" id="vo"}
+        <li><a href="{$vo.url}" to="_blank"><img src="{$vo.banner}"></a></li>
+        {/volist}
+    </ul>
+</section>
+<section class="index-area">
+    <div class="index-area-container wrapper">
+        <div class="index-area-content">
+            <p>我们等不及开始你的项目了！不管大小，我们都能做到。联系我们的建设者为自定义项目报价今天！</p>
+        </div>
+        <div  class="viewInfo">
+            <a href="contact.html">查看详情</a>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <p>Copyright ©2018 黑龙江悦达管道工程建筑有限公司 All Rights Reserved  黑ICP备17005790号-1</p>
+</footer>
+<script src="/public/__STATIC__/index/js/jquery-1.11.0.min.js"></script>
+<script src="/public/__STATIC__/index/js/swiper.jquery.min.js"></script>
+<script src="/public/__STATIC__/index/js/wow.min.js"></script>
+<script src="/public/__STATIC__/index/js/bootstrap.min.js"></script>
+<script>
+    var mySwiper1 = new Swiper('#swiper1', {
+        loop: true,
+        effect: 'fade',
+        fade: {
+            crossFade: false,
+        },
+        autoplay: 4000,
+        speed: 1000,
+        pagination: '.swiper-pagination'
+    });
+    var mySwiper2 = new Swiper('#swiper2', {
+        loop:true,
+        autoplay: 3000,
+        speed: 700,
+        slidesPerView: 4,
+        breakpoints: {
+                       480: {
+                           slidesPerView: 1,
+                            spaceBetween: 0
+                       }
+        }
+
+    });
+    new WOW({
+       mobile:false
+    }).init();
+</script>
+</body>
+
+</html>

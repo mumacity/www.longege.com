@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>黑龙江悦达管道工程建筑有限公司</title>
+    <meta name="keywords" content="黑龙江悦达管道工程建筑有限公司,工程建设,悦达管道,工程建筑">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/animate.css">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/__STATIC__/index/css/style.css">
+    <script type="application/x-javascript">
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar() { window.scrollTo(0, 1); }
+    
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="fixed-header">
+            <div class="navbar-wrapper">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="logo">
+                                <a class="navbar-brand" href="#">
+                                <img src="/public/__STATIC__/index/static/images/logo.jpg" alt="">黑龙江悦达管道工程建筑有限公司</a>
+                            </div>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <nav  @click="closeNav">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="{:url('Index/index')}">首页</a></li>
+                                    <li><a href="{:url('Index/about')}" class="active">公司简介</a></li>
+                                    <li><a href="{:url('Index/cases')}">工程案例</a></li>
+                                    <li><a href="{:url('Index/product')}">产品展示</a></li>
+                                    <li><a href="{:url('Index/news')}">新闻中心</a></li>
+                                    <li><a href="{:url('Index/contact')}">联系我们</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+        <section class="about-img">
+            {volist name="info" id="vo"}
+            <img src="{$vo.banner}" alt="">
+            {/volist}
+
+        </section>
+        <section class="about wrapper">
+        	<p class="about-title wow fadeInUp">
+        		<span>公司简介</span>
+        	</p>
+        	<div class="about-content wow slideInLeft">
+        		<img src="/public/__STATIC__/index/static/images/about1.jpg" class="wow slideInLeft">
+        		<div class="about-content-right wow slideInRight" data-wow-delay=".1s">
+        			<h2>这就是我们</h2>
+        			<div class="divide-line">
+        				<hr>
+        			</div>
+                    {volist name="info1" id="vo"}
+                    {$vo.about}
+                    {/volist}
+        		</div>
+        	</div>
+        </section>
+        <section class="whatwedo">
+        	<div class="wrapper">
+        		<div class="whatwedo-font wow fadeInLeft" data-wow-delay=".1s">
+        			<h1>这就是我们所做的</h1>
+                    {volist name="info2" id="vo"}
+                    {$vo.about1}
+                    {/volist}
+        		</div>
+        		<div class="whatwedo-img wow fadeInRight" data-wow-delay=".1s">
+        			<img src="/public/__STATIC__/index/static/images/about2.png" alt="">
+        		</div>
+        	</div>
+        </section>
+
+        <section class="index-area">
+            <div class="index-area-container wrapper">
+                <div class="index-area-content">
+                    <p>我们等不及开始你的项目了！不管大小，我们都能做到。联系我们的建设者为自定义项目报价今天！</p>
+                </div>
+                <div  class="viewInfo">
+                    <a href="contact.html">查看详情</a>
+                </div>
+                
+            </div>
+        </section>
+        <footer>
+            <p>Copyright ©2018 黑龙江悦达管道工程建筑有限公司 All Rights Reserved  黑ICP备17005790号-1</p>
+        </footer>
+        <script src="/public/__STATIC__/index/js/jquery-1.11.0.min.js"></script>
+        <script src="/public/__STATIC__/index/js/wow.min.js"></script>
+        <script src="/public/__STATIC__/index/js/bootstrap.min.js"></script>
+         <script>
+             new WOW().init();
+         </script>
+       
+</body>
+
+</html>
